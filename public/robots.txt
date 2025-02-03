@@ -1,3 +1,3 @@
 User-agent: *
 Disallow:
-Sitemap: https://douglas-dev-cyan.vercel.app/sitemap.xml
+Sitemap: https://douglas-rocha-dev.vercel.app/sitemap.xml

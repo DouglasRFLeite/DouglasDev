@@ -12,7 +12,7 @@ draft: false
 hidemeta: false
 comments: false
 description: "The title says it all"
-canonicalURL: "http://localhost:1313/blog/my-fist-post/"
+canonicalURL: "http://https://douglas-dev-cyan.vercel.app/log/my-fist-post/"
 disableHLJS: true # to disable highlightjs
 disableShare: false
 disableHLJS: false

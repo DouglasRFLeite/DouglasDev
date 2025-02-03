@@ -2,26 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/contact/</loc>
+    <loc>https://douglas-dev-cyan.vercel.app/contact/</loc>
     <lastmod>2025-02-03T17:30:34-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://douglas-dev-cyan.vercel.app/</loc>
     <lastmod>2025-02-03T17:30:34-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/</loc>
+    <loc>https://douglas-dev-cyan.vercel.app/projects/</loc>
     <lastmod>2025-02-03T17:29:43-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://douglas-dev-cyan.vercel.app/about/</loc>
     <lastmod>2025-02-03T17:22:09-03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/</loc>
+    <loc>https://douglas-dev-cyan.vercel.app/blog/</loc>
     <lastmod>2020-09-15T11:30:03+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/my-fist-post/</loc>
+    <loc>https://douglas-dev-cyan.vercel.app/blog/my-fist-post/</loc>
     <lastmod>2020-09-15T11:30:03+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://douglas-dev-cyan.vercel.app/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://douglas-dev-cyan.vercel.app/tags/</loc>
   </url>
 </urlset>

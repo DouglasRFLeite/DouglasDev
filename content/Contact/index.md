@@ -4,4 +4,10 @@ draft: false
 title: "Contact"
 ---
 
-Concact me through any of the socials bellow.
+Contact me through any of the socials bellow.
+
+[LinkedIn](https://www.linkedin.com/in/douglas-rocha-leite)
+
+[GitHub](https://github.com/DouglasRFLeite)
+
+[Medium](https://medium.com/@douglas.rochedo)

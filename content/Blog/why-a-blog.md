@@ -31,9 +31,9 @@ I’ve always been a writer—well, except for that one time in freshman year wh
 
 But aside from that, I used to write poems as a teenager (never shared them, though), fiction as a kid, and I loved crafting DnD campaigns in my early 20s.
 
-Technical writing found me around 2022, when I was trying to break into Data Science when kept saying, _"You need a Medium blog to share what you learn."_
+Technical writing found me around 2022, when I was trying to break into Data Science and everyone kept saying, _"You need a Medium blog to share what you learn."_
 
-Well, I’m not a Data Scientist.
+Well... I’m not a Data Scientist.
 
 Instead, I got into Software Engineering (I have a bachelor’s degree in Computer Engineering), and I love it. But that writing idea stuck with me.
 

@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://douglas-rocha-dev.vercel.app/blog/java-2025/</loc>
+    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+  </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/blog/why-a-blog/</loc>
     <lastmod>2020-09-15T11:30:03+00:00</lastmod>
   </url><url>
@@ -20,6 +23,9 @@
     <loc>https://douglas-rocha-dev.vercel.app/about/</loc>
     <lastmod>2025-02-03T17:22:09-03:00</lastmod>
   </url><url>
+    <loc>https://douglas-rocha-dev.vercel.app/tags/back-end/</loc>
+    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+  </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/tags/blogging/</loc>
     <lastmod>2020-09-15T11:30:03+00:00</lastmod>
   </url><url>
@@ -30,6 +36,18 @@
     <lastmod>2020-09-15T11:30:03+00:00</lastmod>
   </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/tags/hugo/</loc>
+    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://douglas-rocha-dev.vercel.app/tags/java/</loc>
+    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://douglas-rocha-dev.vercel.app/tags/roadmap/</loc>
+    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://douglas-rocha-dev.vercel.app/tags/software-development/</loc>
+    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://douglas-rocha-dev.vercel.app/tags/software-engineering/</loc>
     <lastmod>2020-09-15T11:30:03+00:00</lastmod>
   </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/tags/</loc>

@@ -1,6 +1,6 @@
 ---
 title: "Why a Blog?"
-date: 2020-09-15T11:30:03+00:00
+date: 2025-02-04
 weight: 998
 tags: ["blogging", "hugo", "content creation"]
 author: "Douglas"

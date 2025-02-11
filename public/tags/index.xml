@@ -11,62 +11,104 @@
     </image>
     <generator>Hugo -- 0.143.0</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 15 Sep 2020 11:30:03 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 11 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://douglas-rocha-dev.vercel.app/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Back-End</title>
-      <link>https://douglas-rocha-dev.vercel.app/tags/back-end/</link>
-      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
-      <guid>https://douglas-rocha-dev.vercel.app/tags/back-end/</guid>
+      <title>AWS</title>
+      <link>https://douglas-rocha-dev.vercel.app/tags/aws/</link>
+      <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://douglas-rocha-dev.vercel.app/tags/aws/</guid>
       <description></description>
     </item>
     <item>
-      <title>Blogging</title>
-      <link>https://douglas-rocha-dev.vercel.app/tags/blogging/</link>
-      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
-      <guid>https://douglas-rocha-dev.vercel.app/tags/blogging/</guid>
+      <title>Cloud</title>
+      <link>https://douglas-rocha-dev.vercel.app/tags/cloud/</link>
+      <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://douglas-rocha-dev.vercel.app/tags/cloud/</guid>
       <description></description>
     </item>
     <item>
-      <title>Content Creation</title>
-      <link>https://douglas-rocha-dev.vercel.app/tags/content-creation/</link>
-      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
-      <guid>https://douglas-rocha-dev.vercel.app/tags/content-creation/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Hugo</title>
-      <link>https://douglas-rocha-dev.vercel.app/tags/hugo/</link>
-      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
-      <guid>https://douglas-rocha-dev.vercel.app/tags/hugo/</guid>
+      <title>Go</title>
+      <link>https://douglas-rocha-dev.vercel.app/tags/go/</link>
+      <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://douglas-rocha-dev.vercel.app/tags/go/</guid>
       <description></description>
     </item>
     <item>
       <title>Java</title>
       <link>https://douglas-rocha-dev.vercel.app/tags/java/</link>
-      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
+      <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
       <guid>https://douglas-rocha-dev.vercel.app/tags/java/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kotlin</title>
+      <link>https://douglas-rocha-dev.vercel.app/tags/kotlin/</link>
+      <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://douglas-rocha-dev.vercel.app/tags/kotlin/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Microservices</title>
+      <link>https://douglas-rocha-dev.vercel.app/tags/microservices/</link>
+      <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://douglas-rocha-dev.vercel.app/tags/microservices/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PostgreSQL</title>
+      <link>https://douglas-rocha-dev.vercel.app/tags/postgresql/</link>
+      <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://douglas-rocha-dev.vercel.app/tags/postgresql/</guid>
       <description></description>
     </item>
     <item>
       <title>Roadmap</title>
       <link>https://douglas-rocha-dev.vercel.app/tags/roadmap/</link>
-      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
+      <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
       <guid>https://douglas-rocha-dev.vercel.app/tags/roadmap/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Back-End</title>
+      <link>https://douglas-rocha-dev.vercel.app/tags/back-end/</link>
+      <pubDate>Fri, 07 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://douglas-rocha-dev.vercel.app/tags/back-end/</guid>
       <description></description>
     </item>
     <item>
       <title>Software Development</title>
       <link>https://douglas-rocha-dev.vercel.app/tags/software-development/</link>
-      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
+      <pubDate>Fri, 07 Feb 2025 00:00:00 +0000</pubDate>
       <guid>https://douglas-rocha-dev.vercel.app/tags/software-development/</guid>
       <description></description>
     </item>
     <item>
       <title>Software Engineering</title>
       <link>https://douglas-rocha-dev.vercel.app/tags/software-engineering/</link>
-      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
+      <pubDate>Fri, 07 Feb 2025 00:00:00 +0000</pubDate>
       <guid>https://douglas-rocha-dev.vercel.app/tags/software-engineering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blogging</title>
+      <link>https://douglas-rocha-dev.vercel.app/tags/blogging/</link>
+      <pubDate>Tue, 04 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://douglas-rocha-dev.vercel.app/tags/blogging/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Content Creation</title>
+      <link>https://douglas-rocha-dev.vercel.app/tags/content-creation/</link>
+      <pubDate>Tue, 04 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://douglas-rocha-dev.vercel.app/tags/content-creation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hugo</title>
+      <link>https://douglas-rocha-dev.vercel.app/tags/hugo/</link>
+      <pubDate>Tue, 04 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://douglas-rocha-dev.vercel.app/tags/hugo/</guid>
       <description></description>
     </item>
   </channel>

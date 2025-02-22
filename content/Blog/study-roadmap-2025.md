@@ -10,7 +10,7 @@ draft: false
 hidemeta: false
 comments: false
 description: "How I plan to level up in software this year"
-canonicalURL: "https://canonical.url/to/page"
+canonicalURL: "https://douglas-rocha-dev.vercel.app/blog/study-roadmap-2025/"
 disableHLJS: true # to disable highlightjs
 disableShare: false
 disableHLJS: false

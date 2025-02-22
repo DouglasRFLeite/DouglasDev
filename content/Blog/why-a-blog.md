@@ -10,6 +10,7 @@ draft: false
 hidemeta: false
 comments: false
 description: "Why I created this blog"
+canonicalURL: "https://douglas-rocha-dev.vercel.app/blog/why-a-blog/"
 disableHLJS: true
 disableShare: false
 hideSummary: false

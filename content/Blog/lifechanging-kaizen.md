@@ -11,7 +11,7 @@ draft: false
 hidemeta: false
 comments: false
 description: "How the Kaizen Philosophy can change your life for the better, one day at a time"
-canonicalURL: "https://canonical.url/to/page"
+canonicalURL: "https://douglas-rocha-dev.vercel.app/blog/lifechanging-kaizen/"
 disableHLJS: true # to disable highlightjs
 disableShare: false
 disableHLJS: false

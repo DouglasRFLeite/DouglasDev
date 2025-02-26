@@ -1,7 +1,7 @@
 ---
 title: "How this Japanese Philosophy Changed My Life"
 date: 2025-02-21
-weight: 994
+weight: 995
 # aliases: ["/first"]
 tags: ["Productivity", "Kaizen"]
 author: "Douglas"

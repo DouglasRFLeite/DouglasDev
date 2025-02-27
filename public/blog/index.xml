@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.143.0</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 21 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 26 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://douglas-rocha-dev.vercel.app/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Every Back-end Developer Must Master their ORM</title>
+      <link>https://douglas-rocha-dev.vercel.app/blog/master-orm/</link>
+      <pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://douglas-rocha-dev.vercel.app/blog/master-orm/</guid>
+      <description>Why understanding your Data Mapper matters so much for Back-end Developers</description>
+    </item>
     <item>
       <title>How this Japanese Philosophy Changed My Life</title>
       <link>https://douglas-rocha-dev.vercel.app/blog/lifechanging-kaizen/</link>

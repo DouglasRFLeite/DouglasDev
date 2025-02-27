@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://douglas-rocha-dev.vercel.app/blog/master-orm/</loc>
+    <lastmod>2025-02-26T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/blog/lifechanging-kaizen/</loc>
     <lastmod>2025-02-21T00:00:00+00:00</lastmod>
   </url><url>
@@ -17,19 +20,34 @@
     <loc>https://douglas-rocha-dev.vercel.app/blog/my-fist-post/</loc>
     <lastmod>2025-02-03T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://douglas-rocha-dev.vercel.app/tags/back-end-development/</loc>
+    <lastmod>2025-02-26T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/blog/</loc>
-    <lastmod>2025-02-21T00:00:00+00:00</lastmod>
+    <lastmod>2025-02-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://douglas-rocha-dev.vercel.app/tags/database/</loc>
+    <lastmod>2025-02-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/</loc>
-    <lastmod>2025-02-21T00:00:00+00:00</lastmod>
+    <lastmod>2025-02-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://douglas-rocha-dev.vercel.app/tags/hibernate/</loc>
+    <lastmod>2025-02-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://douglas-rocha-dev.vercel.app/tags/java/</loc>
+    <lastmod>2025-02-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://douglas-rocha-dev.vercel.app/tags/orm/</loc>
+    <lastmod>2025-02-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://douglas-rocha-dev.vercel.app/tags/</loc>
+    <lastmod>2025-02-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/tags/kaizen/</loc>
     <lastmod>2025-02-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/tags/productivity/</loc>
-    <lastmod>2025-02-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://douglas-rocha-dev.vercel.app/tags/</loc>
     <lastmod>2025-02-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/tags/aws/</loc>
@@ -39,9 +57,6 @@
     <lastmod>2025-02-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/tags/go/</loc>
-    <lastmod>2025-02-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://douglas-rocha-dev.vercel.app/tags/java/</loc>
     <lastmod>2025-02-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/tags/kotlin/</loc>

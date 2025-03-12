@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://douglas-rocha-dev.vercel.app/blog/3-leadership-lessons/</loc>
+    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/blog/how-to-use-ai/</loc>
     <lastmod>2025-03-03T00:00:00+00:00</lastmod>
   </url><url>
@@ -23,22 +26,28 @@
     <loc>https://douglas-rocha-dev.vercel.app/blog/my-fist-post/</loc>
     <lastmod>2025-02-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://douglas-rocha-dev.vercel.app/tags/ai/</loc>
-    <lastmod>2025-03-03T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/blog/</loc>
-    <lastmod>2025-03-03T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/</loc>
+    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://douglas-rocha-dev.vercel.app/tags/leadership/</loc>
+    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://douglas-rocha-dev.vercel.app/tags/</loc>
+    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://douglas-rocha-dev.vercel.app/tags/tech-lead/</loc>
+    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://douglas-rocha-dev.vercel.app/tags/ai/</loc>
     <lastmod>2025-03-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/tags/software-development/</loc>
     <lastmod>2025-03-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/tags/software-engineering/</loc>
-    <lastmod>2025-03-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://douglas-rocha-dev.vercel.app/tags/</loc>
     <lastmod>2025-03-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/tags/back-end-development/</loc>

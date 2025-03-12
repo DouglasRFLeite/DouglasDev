@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.143.0</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 03 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://douglas-rocha-dev.vercel.app/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lessons I Learned About Leadership (That No One Told Me)</title>
+      <link>https://douglas-rocha-dev.vercel.app/blog/3-leadership-lessons/</link>
+      <pubDate>Wed, 12 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://douglas-rocha-dev.vercel.app/blog/3-leadership-lessons/</guid>
+      <description>3 Leadership Lessons that can help new leaders</description>
+    </item>
     <item>
       <title>How to Use AI in Programming Without Losing Your Mind (or Your Code)</title>
       <link>https://douglas-rocha-dev.vercel.app/blog/how-to-use-ai/</link>

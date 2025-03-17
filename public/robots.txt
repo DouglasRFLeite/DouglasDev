@@ -1,3 +1,1 @@
 User-agent: *
-Disallow:
-Sitemap: https://douglas-rocha-dev.vercel.app/sitemap.xml

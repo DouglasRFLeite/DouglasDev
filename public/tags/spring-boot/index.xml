@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spring Boot on DouglasDev</title>
+    <link>https://douglas-rocha-dev.vercel.app/tags/spring-boot/</link>
+    <description>Recent content in Spring Boot on DouglasDev</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 16 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://douglas-rocha-dev.vercel.app/tags/spring-boot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tutorial - Spring Boot &amp; AWS S3 for Image Storing</title>
+      <link>https://douglas-rocha-dev.vercel.app/blog/spring-aws-s3/</link>
+      <pubDate>Sun, 16 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://douglas-rocha-dev.vercel.app/blog/spring-aws-s3/</guid>
+      <description>&lt;p&gt;So&amp;hellip; my wife was busy on a Sunday afternoon. Do you know what that means? Yeah&amp;hellip; It means I&amp;rsquo;m going to code my a*s off.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve been wanting to start playing with AWS for sometime now, and this week I thought of an interesting use for AWS S3 at work and wanted to test it out.&lt;/p&gt;&#xA;&lt;p&gt;The idea is to store and retrieve images on S3 using a Spring Boot Application.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

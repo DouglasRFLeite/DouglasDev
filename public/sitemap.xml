@@ -23,19 +23,40 @@
     <loc>https://douglas-rocha-dev.vercel.app/blog/why-a-blog/</loc>
     <lastmod>2025-02-04T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://douglas-rocha-dev.vercel.app/blog/spring-aws-s3/</loc>
+    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/blog/my-fist-post/</loc>
     <lastmod>2025-02-03T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://douglas-rocha-dev.vercel.app/tags/aws/</loc>
+    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/blog/</loc>
-    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://douglas-rocha-dev.vercel.app/tags/cloud/</loc>
+    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/</loc>
-    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
+    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://douglas-rocha-dev.vercel.app/tags/leadership/</loc>
-    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
+    <loc>https://douglas-rocha-dev.vercel.app/tags/java/</loc>
+    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://douglas-rocha-dev.vercel.app/tags/s3/</loc>
+    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://douglas-rocha-dev.vercel.app/tags/spring/</loc>
+    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://douglas-rocha-dev.vercel.app/tags/spring-boot/</loc>
+    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/tags/</loc>
+    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://douglas-rocha-dev.vercel.app/tags/leadership/</loc>
     <lastmod>2025-03-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/tags/tech-lead/</loc>
@@ -59,9 +80,6 @@
     <loc>https://douglas-rocha-dev.vercel.app/tags/hibernate/</loc>
     <lastmod>2025-02-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://douglas-rocha-dev.vercel.app/tags/java/</loc>
-    <lastmod>2025-02-26T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/tags/orm/</loc>
     <lastmod>2025-02-26T00:00:00+00:00</lastmod>
   </url><url>
@@ -70,12 +88,6 @@
   </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/tags/productivity/</loc>
     <lastmod>2025-02-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://douglas-rocha-dev.vercel.app/tags/aws/</loc>
-    <lastmod>2025-02-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://douglas-rocha-dev.vercel.app/tags/cloud/</loc>
-    <lastmod>2025-02-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/tags/go/</loc>
     <lastmod>2025-02-11T00:00:00+00:00</lastmod>

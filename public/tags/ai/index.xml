@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AI on DouglasDev</title>
     <link>https://douglas-rocha-dev.vercel.app/tags/ai/</link>
     <description>Recent content in AI on DouglasDev</description>
-    <image>
-      <title>DouglasDev</title>
-      <url>https://douglas-rocha-dev.vercel.app/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://douglas-rocha-dev.vercel.app/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
-    </image>
-    <generator>Hugo -- 0.143.0</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Mon, 03 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://douglas-rocha-dev.vercel.app/tags/ai/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +13,7 @@
       <link>https://douglas-rocha-dev.vercel.app/blog/how-to-use-ai/</link>
       <pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate>
       <guid>https://douglas-rocha-dev.vercel.app/blog/how-to-use-ai/</guid>
-      <description>A simple framework to use AI for Developing Software</description>
+      <description>&lt;p&gt;Artificial Intelligence (AI) is revolutionizing software development. It&amp;rsquo;s up to us to decide if that revolution of for the better or worse.&lt;/p&gt;&#xA;&lt;p&gt;AI helps debug errors, explain messy code, generate unit tests, and even teach complex concepts. But if you’re not careful, it can also turn into a crutch—or worse, a trap.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve seen junior developers blindly copy-paste AI-generated code into their (and even my) projects, only to spend hours later trying to fix the mess. So, how do you actually use AI the right way? Let’s break it down.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

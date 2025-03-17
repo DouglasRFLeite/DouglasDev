@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Microservices on DouglasDev</title>
     <link>https://douglas-rocha-dev.vercel.app/tags/microservices/</link>
     <description>Recent content in Microservices on DouglasDev</description>
-    <image>
-      <title>DouglasDev</title>
-      <url>https://douglas-rocha-dev.vercel.app/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://douglas-rocha-dev.vercel.app/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
-    </image>
-    <generator>Hugo -- 0.143.0</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Tue, 11 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://douglas-rocha-dev.vercel.app/tags/microservices/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +13,7 @@
       <link>https://douglas-rocha-dev.vercel.app/blog/study-roadmap-2025/</link>
       <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
       <guid>https://douglas-rocha-dev.vercel.app/blog/study-roadmap-2025/</guid>
-      <description>How I plan to level up in software this year</description>
+      <description>&lt;p&gt;At the beginning of each year, I like to set clear learning goals to push myself further as a software engineer. But if there’s one thing I’ve learned, it’s that a &lt;strong&gt;vague goal without a structured plan is just wishful thinking.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;That’s why, instead of saying “&lt;em&gt;I want to get better at Java”&lt;/em&gt; or “&lt;em&gt;I should learn cloud computing&lt;/em&gt;,” I&amp;rsquo;ve broken my learning into focused, quarterly goals that align with my daily routine.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

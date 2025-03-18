@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://douglas-rocha-dev.vercel.app/projects/spring-aws-s3/</loc>
+    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/blog/3-leadership-lessons/</loc>
     <lastmod>2025-03-12T00:00:00+00:00</lastmod>
   </url><url>
@@ -23,16 +26,10 @@
     <loc>https://douglas-rocha-dev.vercel.app/blog/why-a-blog/</loc>
     <lastmod>2025-02-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://douglas-rocha-dev.vercel.app/blog/spring-aws-s3/</loc>
-    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/blog/my-fist-post/</loc>
     <lastmod>2025-02-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/tags/aws/</loc>
-    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://douglas-rocha-dev.vercel.app/blog/</loc>
     <lastmod>2025-03-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/tags/cloud/</loc>
@@ -42,6 +39,9 @@
     <lastmod>2025-03-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/tags/java/</loc>
+    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://douglas-rocha-dev.vercel.app/projects/</loc>
     <lastmod>2025-03-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/tags/s3/</loc>
@@ -55,6 +55,9 @@
   </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/tags/</loc>
     <lastmod>2025-03-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://douglas-rocha-dev.vercel.app/blog/</loc>
+    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/tags/leadership/</loc>
     <lastmod>2025-03-12T00:00:00+00:00</lastmod>
@@ -118,9 +121,6 @@
   </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/contact/</loc>
     <lastmod>2025-02-03T17:30:34-03:00</lastmod>
-  </url><url>
-    <loc>https://douglas-rocha-dev.vercel.app/projects/</loc>
-    <lastmod>2025-02-03T17:29:43-03:00</lastmod>
   </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/about/</loc>
     <lastmod>2025-02-03T17:22:09-03:00</lastmod>

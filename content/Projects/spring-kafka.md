@@ -114,7 +114,7 @@ public class KafkaProducerConfig {
   @Bean
   public ProducerFactory<String, MessageModel> messageProducerFactory() {
     Map<String, Object> configProps = new HashMap<>();
-
+    // ...
     return new DefaultKafkaProducerFactory<>(configProps);
   }
 
@@ -230,3 +230,149 @@ Now, if I use Postman to send a Post Request to our endpoint with this data:
 This gets printed on the Terminal:
 
 `Sending message on Kafka Topic: MessageModel(name=Douglas, time=2025-04-07T18:01:37.907616782, message=Olá, mundo!)`
+
+### 2.6 - Inspecting via Console (Optional)
+
+This is another optional step that will only work if you have followed the last (or, if you are doing all of this in an existing project, it should work on your topics as well).
+
+As we don't yet have developed our Consumer, we need another way to verify if our Producer is... you know, producing.
+
+Kafka, when built, makes some shellcript files available for us that will help us do that.
+
+If you've built Kafka like I have, you can access them this way, via your terminal / console.
+
+```
+docker ps # this will let you find the container id where Kafka is running
+docker exec -t <CONTAINER-ID> bash # fill in your container id
+# now you should be inside the container environment
+cd /opt/kafka/bin
+./kafka-topics.sh --bootstrap-server localhost:9092 --list # this should list the topics
+/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic <TOPIC-NAME> --from-beginning
+```
+
+It may take a couple of seconds, but this last command should let you see every message that was produced and sent on that topic.
+
+## Step 3 - Creating your Consumer Application
+
+Now we have a functional Producer Application, we should consume the data from the Topic via Java as well.
+
+### 3.1 - Create a Project with Spring Initializr
+
+This should be done the exact same way as with the Producer. Reference [2.1 - Create a Project with Spring Initializr](#21---create-a-project-with-spring-initializr).
+
+### 3.2 - Creating your Message
+
+We also have to define the format of our message via POJO, so reference [2.2 - Creating your Message](#22---creating-your-message).
+
+### 3.3 - Configuring for Apache Kafka
+
+Here we are finally doing something different.
+
+First of all, you should add some configurations to your properties file. They are similar to the ones on the producer, but different.
+
+```
+spring.application.name=consumer
+server.port=8082
+
+spring.kafka.bootstrap-servers=localhost:9092
+```
+
+We used the Producer to configure the Topic, so we don not have to do that again. We just need to configure how we are going to read from the Topic we are producing on. We will do that on the `KafkaConsumerConfig.java` file.
+
+```
+@EnableKafka
+@Configuration
+public class KafkaConsumerConfig {
+
+  @Getter
+  private static final String MESSAGE_TOPIC = "douglas-messages";
+
+  @Value(value = "${spring.kafka.bootstrap-servers}")
+  private String serverAddress;
+
+  @Bean
+  public ConsumerFactory<String, MessageModel> messageConsumerFactory() {
+    Map<String, Object> configProps = new HashMap<>();
+    // ...
+    return new DefaultKafkaConsumerFactory<>(configProps);
+  }
+
+  @Bean
+  public ConcurrentKafkaListenerContainerFactory<String, MessageModel> messageKafkaListenerContainerFactory() {
+    ConcurrentKafkaListenerContainerFactory<String, MessageModel> listenerFactory = new ConcurrentKafkaListenerContainerFactory<>();
+    listenerFactory.setConsumerFactory(messageConsumerFactory());
+    return listenerFactory;
+  }
+}
+```
+
+You can see the structure is very similar to the one on the Producer. We also have the server from the properties and the topic name on a variable to avoid magic Strings. We have a configuration method we are looking closer into next. And, finally, we have the `ConcurrentKafkaListenerContainerFactoryCreatorOfEverythingQueenOfDragonsKhaleesi` thing.
+
+Yeah, huge name.
+
+But what is does is mostly generating the Consumer version of the Kafka Template. The usage is a bit different, as we'll see shortly. Now, to the configuration:
+
+```
+@Bean
+  public ConsumerFactory<String, MessageModel> messageConsumerFactory() {
+    Map<String, Object> configProps = new HashMap<>();
+
+    configProps.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, serverAddress); // setting the Server
+    configProps.put(ConsumerConfig.GROUP_ID_CONFIG, MESSAGE_TOPIC); // setting the Topic
+
+    // The next two configurations set an Error Handling layer on the consumer
+    configProps.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, ErrorHandlingDeserializer.class);
+    configProps.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, ErrorHandlingDeserializer.class);
+
+    // We need to deserialize the result of the error handler when there's no error
+    configProps.put(ErrorHandlingDeserializer.KEY_DESERIALIZER_CLASS, JsonDeserializer.class);
+    configProps.put(ErrorHandlingDeserializer.VALUE_DESERIALIZER_CLASS, JsonDeserializer.class);
+
+    configProps.put(JsonDeserializer.TRUSTED_PACKAGES, "*"); // this removes a security layer we don't need
+    configProps.put(JsonDeserializer.VALUE_DEFAULT_TYPE, MessageModel.class.getName()); // setting the model
+
+    return new DefaultKafkaConsumerFactory<>(configProps);
+  }
+```
+
+There's some more configuration here, but I believe the comments do justice.
+
+### 3.4 - Listening for Messages
+
+As we did for the Producer, the Consumer will have a `MessageService.java` file to listen for messages on that topic and act when there is a new one.
+
+```
+@Service
+public class MessageService {
+
+  @KafkaListener(topics = "douglas-messages", containerFactory = "messageKafkaListenerContainerFactory")
+  public void messageListener(MessageModel msg) {
+    System.out.println("Message Received by Consumer: " + msg.toString());
+  }
+}
+```
+
+You have probably noticed a big difference between the Producer and the Consumer now. But, overall, both codes are preetty clean and easy to understand.
+
+## Step 4 - Making it Happen
+
+Now we are finally making the cool stuff happen.
+
+If you've followed everything closely so far, you should be able to run both applications and make them work together.
+
+On this tutorial, we are doing that with a Postman POST request sent to the Producer. This is the result:
+
+```
+#This is what I sent via Postman
+{
+    "name": "Producer",
+    "time": null,
+    "message": "Hello, Consumer!"
+}
+
+# This shows on the Producers Console
+Sending message on Kafka Topic: MessageModel(name=Producer, time=2025-04-08T14:12:08.338257923, message=Hello, Consumer!)
+
+# This shows on the Consumers Console
+Message Received by Consumer: MessageModel(name=Producer, time=2025-04-08T14:12:08.338257923, message=Hello, Consumer!)
+```

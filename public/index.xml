@@ -11,22 +11,8 @@
     </image>
     <generator>Hugo -- 0.143.0</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 07 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 17 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://douglas-rocha-dev.vercel.app/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Tutorial - Spring Boot &amp; Apache Kafka</title>
-      <link>https://douglas-rocha-dev.vercel.app/projects/spring-kafka/</link>
-      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://douglas-rocha-dev.vercel.app/projects/spring-kafka/</guid>
-      <description>A tutorial on how I created two Spring Boot applications that comunicate via Apache Kafka</description>
-    </item>
-    <item>
-      <title>Tutorial - Spring Boot &amp; AWS S3 for Image Storing</title>
-      <link>https://douglas-rocha-dev.vercel.app/projects/spring-aws-s3/</link>
-      <pubDate>Sun, 16 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://douglas-rocha-dev.vercel.app/projects/spring-aws-s3/</guid>
-      <description>A tutorial on how I created a Spring Boot application to store and retrieve images from an AWS S3 Bucket</description>
-    </item>
     <item>
       <title>Lessons I Learned About Leadership (That No One Told Me)</title>
       <link>https://douglas-rocha-dev.vercel.app/blog/3-leadership-lessons/</link>
@@ -70,11 +56,25 @@
       <description>If you believe Java is outdated or dead, let me change your mind</description>
     </item>
     <item>
+      <title>Tutorial - Spring Boot &amp; Apache Kafka</title>
+      <link>https://douglas-rocha-dev.vercel.app/projects/spring-kafka/</link>
+      <pubDate>Thu, 17 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://douglas-rocha-dev.vercel.app/projects/spring-kafka/</guid>
+      <description>A tutorial on how I created two Spring Boot applications that comunicate via Apache Kafka</description>
+    </item>
+    <item>
       <title>Why a Blog?</title>
       <link>https://douglas-rocha-dev.vercel.app/blog/why-a-blog/</link>
       <pubDate>Tue, 04 Feb 2025 00:00:00 +0000</pubDate>
       <guid>https://douglas-rocha-dev.vercel.app/blog/why-a-blog/</guid>
       <description>Why I created this blog</description>
+    </item>
+    <item>
+      <title>Tutorial - Spring Boot &amp; AWS S3 for Image Storing</title>
+      <link>https://douglas-rocha-dev.vercel.app/projects/spring-aws-s3/</link>
+      <pubDate>Sun, 16 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://douglas-rocha-dev.vercel.app/projects/spring-aws-s3/</guid>
+      <description>A tutorial on how I created a Spring Boot application to store and retrieve images from an AWS S3 Bucket</description>
     </item>
     <item>
       <title>My First Post</title>

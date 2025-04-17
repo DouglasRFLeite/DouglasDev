@@ -1,7 +1,7 @@
 ---
 title: "Tutorial - Spring Boot & AWS S3 for Image Storing"
 date: 2025-03-16
-weight: 992
+weight: 999
 tags: ["Java", "Spring", "Spring Boot", "AWS", "Cloud", "S3"]
 author: "Douglas"
 showToc: true

@@ -1,7 +1,7 @@
 ---
 title: "Tutorial - Spring Boot & Apache Kafka"
-date: 2025-04-07
-weight: 992
+date: 2025-04-17
+weight: 998
 tags: ["Java", "Spring", "Spring Boot", "Apache Kafka", "Event Streaming", "Producer", "Consumer"]
 author: "Douglas"
 showToc: true
@@ -29,13 +29,34 @@ cover:
     relative: false # when using page bundles set this to true
 ---
 
-Yeah. If you've seen my last tutorial on AWS S3, you may be guessing that my wife is away for another weekend. But you guessed wrong.
+Yeah. If you've seen my last tutorial on AWS S3, you may be guessing that my wife is away for another weekend. But you guessed it wrong.
 
-This time, my Technical Manager had the awesome idea to include Apache Kafka in our tech stack. And I, as the Senior dev and Tech Lead, had the privilege do choose my task.
+This time, my Technical Manager and I had the awesome idea to include Apache Kafka in our tech stack.
 
-As I did not yet know how to use Apache Kafka, I obviously chose to learn it on paid time (yay).
+As the Senior dev and Tech Lead I took responsibility (and privilege) to work on this new integration.
+
+As I did not yet know how to use Apache Kafka, I chose to begin my learning process by creating a quick POC (Proof of Concept) and to share what I've learned with you guys.
 
 ## What and Why Apache Kafka?
+
+In today's world of distributed systems and microservices, traditional synchronous communication between services can often become a bottleneck. Enter Apache Kafka and other asynchronous messaging queues as scalable **publish-subscribe models**.
+
+Apache Kafka, more than other tools, is built to persist, replicate and stream massive volumes of data with high fault tolerance, that's why it's so often chosen ad the messaging queue nowadays. And that's why I'm so happy to learn it.
+
+### The theory behind it
+
+At its core, Kafka enables systems to communicate through **events** (also called **messages**) in a publish-subscribe model. Here's a breakdown of key concepts:
+
+**Topics**
+A topic is a category or feed name to which records are sent by **producers** and from which **consumers** read. You can think of a topic as a log file or a stream of events grouped by a common purpose.
+
+Kafka topics can be partitioned and replicated for scalability and fault tolerance.
+
+**Producers (Publishers)**
+A producer is any application or service that **sends messages (also called publishing)** to a Kafka topic. Producers can send data to different topics, and they decide which partition of a topic to write to — either randomly, round-robin, or based on a key.
+
+**Consumers**
+A consumer is any application or service that **reads messages** from one or more topics. Kafka delivers messages in the order they appear in each partition. Consumers can be grouped into consumer groups, where each group coordinates to read from a topic without duplicating work.
 
 ## Step 1 - Getting an Apache Kafka Instance Up and Running
 
@@ -376,3 +397,25 @@ Sending message on Kafka Topic: MessageModel(name=Producer, time=2025-04-08T14:1
 # This shows on the Consumers Console
 Message Received by Consumer: MessageModel(name=Producer, time=2025-04-08T14:12:08.338257923, message=Hello, Consumer!)
 ```
+
+---
+
+We've just built a basic but complete event-driven architecture using **Apache Kafka and Spring Boot**.
+
+This setup, while simple, demonstrates the power of Kafka to decouple services and handle asynchronous communication with ease. In real-world applications, this approach can scale to thousands of messages per second, spanning microservices, data pipelines, logs, and more.
+
+If you’re coming from a traditional REST-based mindset, as I am, this might feel like a paradigm shift — and that’s because it is. But it's one that unlocks a whole new level of flexibility and robustness in your system design.
+
+### References
+
+1. Spring Boot Documentation
+   https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/
+   The official Spring Boot documentation for configuration, service layers, and REST controllers.
+
+2. Apache Kafka Documentation
+   https://kafka.apache.org/documentation/
+   The official Apache Kafka documentation with Java specific instructions.
+
+3. EXEMPLO PRÁTICO DO USO DO APACHE KAFKA COM JAVA SPRING BOOT
+   https://www.youtube.com/watch?v=EKj8lDRgvLc&ab_channel=Prof.Rog%C3%A9rioNapole%C3%A3oJr.
+   This is a tutorial in Portuguese that helped me get this thing up and running for the first time.

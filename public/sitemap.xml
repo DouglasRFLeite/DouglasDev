@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://douglas-rocha-dev.vercel.app/projects/spring-kafka/</loc>
+    <lastmod>2025-04-07T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/projects/spring-aws-s3/</loc>
     <lastmod>2025-03-16T00:00:00+00:00</lastmod>
   </url><url>
@@ -29,31 +32,43 @@
     <loc>https://douglas-rocha-dev.vercel.app/blog/my-fist-post/</loc>
     <lastmod>2025-02-03T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://douglas-rocha-dev.vercel.app/tags/apache-kafka/</loc>
+    <lastmod>2025-04-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://douglas-rocha-dev.vercel.app/tags/consumer/</loc>
+    <lastmod>2025-04-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://douglas-rocha-dev.vercel.app/</loc>
+    <lastmod>2025-04-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://douglas-rocha-dev.vercel.app/tags/event-streaming/</loc>
+    <lastmod>2025-04-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://douglas-rocha-dev.vercel.app/tags/java/</loc>
+    <lastmod>2025-04-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://douglas-rocha-dev.vercel.app/tags/producer/</loc>
+    <lastmod>2025-04-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://douglas-rocha-dev.vercel.app/projects/</loc>
+    <lastmod>2025-04-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://douglas-rocha-dev.vercel.app/tags/spring/</loc>
+    <lastmod>2025-04-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://douglas-rocha-dev.vercel.app/tags/spring-boot/</loc>
+    <lastmod>2025-04-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://douglas-rocha-dev.vercel.app/tags/</loc>
+    <lastmod>2025-04-07T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/tags/aws/</loc>
     <lastmod>2025-03-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/tags/cloud/</loc>
     <lastmod>2025-03-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://douglas-rocha-dev.vercel.app/</loc>
-    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://douglas-rocha-dev.vercel.app/tags/java/</loc>
-    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://douglas-rocha-dev.vercel.app/projects/</loc>
-    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/tags/s3/</loc>
-    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://douglas-rocha-dev.vercel.app/tags/spring/</loc>
-    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://douglas-rocha-dev.vercel.app/tags/spring-boot/</loc>
-    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://douglas-rocha-dev.vercel.app/tags/</loc>
     <lastmod>2025-03-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://douglas-rocha-dev.vercel.app/blog/</loc>

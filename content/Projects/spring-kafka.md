@@ -6,7 +6,7 @@ tags: ["Java", "Spring", "Spring Boot", "Apache Kafka", "Event Streaming", "Prod
 author: "Douglas"
 showToc: true
 TocOpen: false
-draft: true
+draft: false
 hidemeta: false
 comments: false
 description: "A tutorial on how I created two Spring Boot applications that comunicate via Apache Kafka"

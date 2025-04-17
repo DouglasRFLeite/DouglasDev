@@ -11,8 +11,57 @@
     </image>
     <generator>Hugo -- 0.143.0</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 16 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://douglas-rocha-dev.vercel.app/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Apache Kafka</title>
+      <link>https://douglas-rocha-dev.vercel.app/tags/apache-kafka/</link>
+      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://douglas-rocha-dev.vercel.app/tags/apache-kafka/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Consumer</title>
+      <link>https://douglas-rocha-dev.vercel.app/tags/consumer/</link>
+      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://douglas-rocha-dev.vercel.app/tags/consumer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Event Streaming</title>
+      <link>https://douglas-rocha-dev.vercel.app/tags/event-streaming/</link>
+      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://douglas-rocha-dev.vercel.app/tags/event-streaming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Java</title>
+      <link>https://douglas-rocha-dev.vercel.app/tags/java/</link>
+      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://douglas-rocha-dev.vercel.app/tags/java/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Producer</title>
+      <link>https://douglas-rocha-dev.vercel.app/tags/producer/</link>
+      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://douglas-rocha-dev.vercel.app/tags/producer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Spring</title>
+      <link>https://douglas-rocha-dev.vercel.app/tags/spring/</link>
+      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://douglas-rocha-dev.vercel.app/tags/spring/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Spring Boot</title>
+      <link>https://douglas-rocha-dev.vercel.app/tags/spring-boot/</link>
+      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://douglas-rocha-dev.vercel.app/tags/spring-boot/</guid>
+      <description></description>
+    </item>
     <item>
       <title>AWS</title>
       <link>https://douglas-rocha-dev.vercel.app/tags/aws/</link>
@@ -28,31 +77,10 @@
       <description></description>
     </item>
     <item>
-      <title>Java</title>
-      <link>https://douglas-rocha-dev.vercel.app/tags/java/</link>
-      <pubDate>Sun, 16 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://douglas-rocha-dev.vercel.app/tags/java/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>S3</title>
       <link>https://douglas-rocha-dev.vercel.app/tags/s3/</link>
       <pubDate>Sun, 16 Mar 2025 00:00:00 +0000</pubDate>
       <guid>https://douglas-rocha-dev.vercel.app/tags/s3/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Spring</title>
-      <link>https://douglas-rocha-dev.vercel.app/tags/spring/</link>
-      <pubDate>Sun, 16 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://douglas-rocha-dev.vercel.app/tags/spring/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Spring Boot</title>
-      <link>https://douglas-rocha-dev.vercel.app/tags/spring-boot/</link>
-      <pubDate>Sun, 16 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://douglas-rocha-dev.vercel.app/tags/spring-boot/</guid>
       <description></description>
     </item>
     <item>

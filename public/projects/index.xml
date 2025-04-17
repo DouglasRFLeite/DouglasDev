@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.143.0</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 16 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://douglas-rocha-dev.vercel.app/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tutorial - Spring Boot &amp; Apache Kafka</title>
+      <link>https://douglas-rocha-dev.vercel.app/projects/spring-kafka/</link>
+      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://douglas-rocha-dev.vercel.app/projects/spring-kafka/</guid>
+      <description>A tutorial on how I created two Spring Boot applications that comunicate via Apache Kafka</description>
+    </item>
     <item>
       <title>Tutorial - Spring Boot &amp; AWS S3 for Image Storing</title>
       <link>https://douglas-rocha-dev.vercel.app/projects/spring-aws-s3/</link>

@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo -- 0.143.0</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 16 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 07 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://douglas-rocha-dev.vercel.app/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My 2025 Learning Roadmap</title>
@@ -19,6 +19,13 @@
       <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
       <guid>https://douglas-rocha-dev.vercel.app/blog/study-roadmap-2025/</guid>
       <description>How I plan to level up in software this year</description>
+    </item>
+    <item>
+      <title>Tutorial - Spring Cloud Function &amp; AWS Lambda</title>
+      <link>https://douglas-rocha-dev.vercel.app/projects/spring-aws-lambda/</link>
+      <pubDate>Wed, 07 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://douglas-rocha-dev.vercel.app/projects/spring-aws-lambda/</guid>
+      <description>A tutorial on how to create a simple serverless function and deploy it to AWS Lambda</description>
     </item>
     <item>
       <title>Tutorial - Spring Boot &amp; AWS S3 for Image Storing</title>

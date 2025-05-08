@@ -33,6 +33,9 @@ This is supposed to be the **Part 1** of a series of smaller tutorials I'll publ
 
 In this article I'll explain how to create and deploy a very simple serverless function with Spring Cloud Function and AWS Lambda. I won't give much effort in thinking of a real-world application for this because it will integrate with my project later, so let us just create a function that receives a name and returns Hello to that name.
 
+You can follow me by coding everything yourself or you can clone this project from here:
+[**DouglasRFLeite/cloud-hello**](https://github.com/DouglasRFLeite/cloud-hello)
+
 ## What and Why...
 
 ### ... AWS Lambda?
@@ -80,11 +83,11 @@ This is actually the easiest step in this whole tutorial.
 I'll use Spring Initializr to create my project, but you can do it anyway you want:
 
 1. Create a Maven project
-2. Spring Boot Version 3.4.3
+2. Spring Boot Version 3.4.5
 3. Java
 4. Name it as you wish
 5. I've used Java 17 and JAR packaging
-6. You'll add dependencies: Spring Web, Function (from Spring Cloud)
+6. You'll add dependencies: Spring Web, Function (from Spring Cloud), Spring Dev Tools (Optional)
 
 You won't do it like this if you're working on a real project, but here we will add our code directly to our Application class.
 

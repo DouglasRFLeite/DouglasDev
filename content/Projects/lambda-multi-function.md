@@ -1,5 +1,5 @@
 ---
-title: "[Tutorial] Using Multiple Functions with Spring Cloud Function and AWS Lambda"
+title: "How to Deploy Multiple Serverless Lambda Functions with One Spring Cloud Function Project on AWS"
 date: 2025-05-08
 weight: 996
 tags: ["Java", "Spring", "Spring Boot", "Spring Cloud Function", "AWS", "Cloud", "Lambda"]
@@ -30,129 +30,130 @@ cover:
     relative: false # when using page bundles set this to true
 ---
 
-This is the **Part 2** of a series of smaller tutorials I'm publishing, all related to the same project. I'll get into more detail about the project specifics when I make an article about it, but it should include **AWS Lambda, AWS DynamoDB and a React front-end**, so stay tuned.
+Have you ever had trouble deploying multiple functions in an easy, cost-effective, and efficient way? In this tutorial, you'll learn how to deploy a single Spring Cloud Function project to AWS with the capability to host multiple functions and endpoints.
 
-This is supposed to be a pretty small tutorial, expanding on the content from the [**Part 1**](/projects/spring-aws-lambda) of this series that teaches the basic means of creating, deploying and testing a Spring Cloud Function project on AWS Lambda.
+This is **Part 2** of a series of smaller tutorials I’m publishing, all related to the same project. I’ll go into more detail about the project specifics when I write a dedicated article, but it will include **AWS Lambda, AWS DynamoDB, and a React front-end**, so stay tuned.
 
-The main focus of this article is to explain how you can have multiple functions in a single project and access them via **Function URLs**. Sound simple, but it took me some research to figure it out.
+This tutorial aims to be concise, building upon the content from [**Part 1**](/projects/spring-aws-lambda), which covers the basics of creating, deploying, and testing a Spring Cloud Function project on AWS Lambda.
 
-To test it, we're expanding our hello function to be a hello-bye function.
+The main goal here is to show how you can have multiple functions within a single project and access them via **Function URLs**. It sounds simple, but it took some research to figure out the best approach.
+
+To illustrate this, we’ll expand our hello function from the first article into a hello-bye function.
 
 ### What and Why...
 
 ### ... AWS Lambda and Spring Cloud Function
 
-Well, we're not doing that again. Refer to [**Part 1**](/projects/spring-aws-lambda) for more on this topic.
+We’re not revisiting this topic here. For that, refer to [**Part 1**](/projects/spring-aws-lambda).
 
 ### ... Multiple Functions?
 
-There are a few possible architectures for more complex serverless applications. A common one is the idea to separate every domain, or even function, into a single project and deploy them as separate Lambdas (or other serverless functions from a different provider). This is a very Microservice oriented thinking, and it's not wrong.
+There are several architectures for more complex serverless applications. A common one is to separate each domain, or even each function, into a single project and deploy them as individual Lambdas (or other serverless functions from different providers). This is very much aligned with a microservices mindset, and there’s nothing wrong with it.
 
-A problem with this architecture is the need to replicate a lot of code, business logic and, in our case, database connectivity code.
+However, one challenge with this approach is the duplication of code, business logic, and, in our case, database connectivity code.
 
-_What do you mean with "in our case"? This code doesn't connect to the any database..._
+_What do you mean by "in our case"? This code doesn’t connect to any database..._
 
 Not yet, little Kid Flash. But it will.
 
-And yeah, even in those cases, it may be worth to separate the project into multiple services and deploy them as multiple functions.
+And yes, even in these scenarios, it might be worth splitting the project into multiple services and deploying them as separate functions.
 
-Let's say you have 5 domains in your project: A, B, C, D and E. Let's say they communicate in pairs,so Function A would need some B code, function B would need some C code, and so on. You would have 5 functions, each with code for almost 2 whole domains. But that's still far smaller functions than a single function with code from all 5 domains. Then it may be worth it.
+Suppose you have 5 domains in your project: A, B, C, D, and E, which communicate in pairs—meaning Function A needs some code from B, Function B needs code from C, and so on. You’d end up with 5 functions, each containing code for nearly two entire domains. While this may seem like a lot of duplication, it’s still far less than having a single function with code from all 5 domains. In that case, splitting makes sense.
 
-In our case, there are only 2 domains, 2 kinds of data and a single database. We would need to copy almost 90% of the code just to separate the entrypoints. It doesn't make sense. **So, multiple functions it is.**
+In our situation, there are only 2 domains, 2 types of data, and a single database. Duplicating nearly 90% of the code just to separate entry points doesn’t make sense. **So, multiple functions it is.**
 
 ### ... Function URLs?
 
-A Lambda Function URL is a direct, dedicated HTTPS endpoint for a single Lambda function. It's a simpler way to invoke your Lambda function over HTTP without needing to configure an API Gateway.
+A Lambda Function URL is a dedicated, straightforward HTTPS endpoint for a specific Lambda function. It offers a simpler way to invoke your Lambda over HTTP without needing to set up an API Gateway.
 
-Is it better than the API Gateway? If with better you mean more powerfull and complete, definetly not. The AWS API Gateway is a fully managed service that acts as a unified "front door" for all of your backend services, including Lambda Functions. It can be so much more than just an endpoint.
+Is it better than API Gateway? If by “better” you mean more powerful and full-featured, then no. AWS API Gateway is a fully managed service that acts as a unified "front door" for all your backend services, including Lambda functions. It can do much more than just provide an endpoint.
 
-Now, if with better you mean **easier, simpler and thus more suited to this specific case**, than yeah... it is.
+But if you mean **easier, simpler, and more suited to this specific case**, then yes—Function URLs are a better fit.
 
-## Step 1 - Creating and Deploying Spring Cloud Function project with multiple Functions
+## Step 1 - Creating and Deploying a Spring Cloud Function Project with Multiple Functions
 
-### 1.1 - Stealing from Part 1
+### 1.1 - Recap of Part 1
 
-I won't get into much detail about how to create a Spring Cloud Function project. Actually, I'm going to mostly copy each step from [**Part 1**](/projects/spring-aws-lambda) and change the project name to cloud-hello-bye.
+I won’t go into detail about creating a Spring Cloud Function project here, since that’s covered in [**Part 1**](/projects/spring-aws-lambda). I’ll just show the code and modify the project name to `cloud-hello-bye`.
 
-This is what you should have if you did the same:
+Here’s what your project should look like if you followed along:
 
-```
+```java
 @SpringBootApplication
 public class CloudHelloByeApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(CloudHelloByeApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(CloudHelloByeApplication.class, args);
+    }
 
-	@Bean
-	public Function<String, String> helloFunction() {
-		return (name) -> "Hello, " + name;
-	}
+    @Bean
+    public Function<String, String> helloFunction() {
+        return (name) -> "Hello, " + name;
+    }
 }
 ```
 
-If you want, you should already be able to run and test your project via HTTP requests (using curl, Postman or whatever). You can even deploy this to AWS as a Lambda and see if it works. But that's the topic of the Part 1, so let's move on.
+You should be able to run and test this locally via HTTP requests (using curl, Postman, etc.). You can even deploy it to AWS as a Lambda and verify it works. But that’s the topic of Part 1, so let’s move forward.
 
-### 1.2 - Creating the Bye function
+### 1.2 - Adding the Bye Function
 
-Now we're expanding our project by adding another function, right here on our Application class (don't do that in a real project, for God sake).
+Now, let’s expand our project by adding another function directly in the same Application class (note: don’t do this in production code!).
 
-```
+```java
 @SpringBootApplication
 public class CloudHelloByeApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(CloudHelloByeApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(CloudHelloByeApplication.class, args);
+    }
 
-	@Bean
-	public Function<String, String> helloFunction() {
-		return (name) -> "Hello, " + name;
-	}
+    @Bean
+    public Function<String, String> helloFunction() {
+        return (name) -> "Hello, " + name;
+    }
 
-	@Bean
-	public Function<String, String> byeFunction() {
-		return (name) -> "Bye bye, " + name;
-	}
-
+    @Bean
+    public Function<String, String> byeFunction() {
+        return (name) -> "Bye bye, " + name;
+    }
 }
 ```
 
-There you go! Now you have a project with two functions. You can test it now, changing the url to see them working separatly.
+Done! Now your project hosts two functions. You can test them by adjusting the URL:
 
-```
+```bash
 curl -X POST -H "Content-Type: text/plain" -d "Douglas" http://localhost:8080/helloFunction
-Hello, Douglas
+# Output: Hello, Douglas
 
 curl -X POST -H "Content-Type: text/plain" -d "Douglas" http://localhost:8080/byeFunction
-Bye bye, Douglas
+# Output: Bye bye, Douglas
 ```
 
-### 1.3 - Lambda Deployment
+### 1.3 - Deploying to Lambda
 
-As before, please refer to [**Part 1**](/projects/spring-aws-lambda) for this content. It's the exact same steps. Once you get to Testing, come back here.
+Refer to [**Part 1**](/projects/spring-aws-lambda) for the deployment steps—they are exactly the same. Once deployed, test your functions there.
 
-If you've tried testing it as we did in Part 1, you probably failed. Let's fix it.
+If you tried testing as in Part 1, you might have run into issues. Let’s fix that.
 
-## Step 2 - Creating, Exposing and Testing with Function URLs
+## Step 2 - Creating, Exposing, and Testing via Function URLs
 
-### 2.1 - Creating
+### 2.1 - Creating the Function URL
 
-So, first of all, we are going to create and Expose the Function URLs so we can test our code.
+First, we’ll create and expose Function URLs so we can test directly.
 
-Hit the Configuration tab and go for Function URL, than Create Function URL, following this order:
+Go to the **Configuration** tab, select **Function URL**, then click **Create Function URL**:
 
 ![Function URL](/images/lambda-multi-function/function-url.png)
 
-For this example, I'm leaving the URL completly open to be accessed from the outside, which is not a good practice in production. (obviously, I took the function down so you don't bankrupt me)
+For this example, I will leave the URL openly accessible (not recommended for production, so I've removed it after releasing this article). 
 
 ![Function Permissions](/images/lambda-multi-function/function-permissions.png)
 
-With that, your URL should appear on the function console like so:
+Once set up, your URL will appear in the Lambda console:
 
 ![Function Endpoint](/images/lambda-multi-function/function-endpoint.png)
 
-Hitting that won't work because both our Functions expect a post, so let's head back to Postman with that in hand.
+Testing this URL directly won’t work immediately because both functions expect POST requests. So, let’s move on to testing with Postman or curl.
 
 ### 2.2 - Testing
 

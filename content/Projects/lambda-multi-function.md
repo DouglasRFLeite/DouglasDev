@@ -7,7 +7,7 @@ author: "Me"
 # author: ["Me", "You"] # multiple authors
 showToc: true
 TocOpen: false
-draft: true
+draft: false
 hidemeta: false
 comments: false
 description: "A tutorial on using multiple functions in a single AWS Lambda deployment with Spring Cloud Function"
@@ -24,7 +24,7 @@ ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
-    image: "images/cool-setup-002.jpeg" # image path/url
+    image: "images/cool-setup-003.jpeg" # image path/url
     alt: "Cool Setup" # alt text
     caption: "Unfortunately not my setup" # display caption under cover
     relative: false # when using page bundles set this to true
@@ -157,6 +157,40 @@ Testing this URL directly won’t work immediately because both functions expect
 
 ### 2.2 - Testing
 
-You can definetly test this with Curl, but I'm using Postman.
+As I did, you're probably thinking we can just hit that endpoint with the function at the end, as we did when running locally, and it will work. Well, unfortunatly that is not the case. We ca, of course, achieve that via API Gateway. But IMO, that's just not enough reason for me to take that extra step.
+
+In order to access our different functions, we'll define the desired function via the **HTTP Header**:
+
+```
+spring.cloud.function.definition
+```
+
+You can do all of that with curl or with code, but I'm just using Postman. I will make it a POST methode, set the new URL and add "Douglas" to the body, as I've done before. The difference will be on the headers:
 
 ![Bye Test](/images/lambda-multi-function/bye-test.png)
+
+![Hello Test](/images/lambda-multi-function/hello-test.png)
+
+## Conclusion
+
+And here you go!
+
+If you weren't a specialist before, now you definetly are!
+
+Jokes aside, this is an important next step in using Lambdas with Spring Cloud Function. At least for me it took a couple of weeks to figure out how to do this properly and I had not found such an easy way to do it online. Now you don't have to go through what I did.
+
+If you have any questions or want to leave any comments, I recommend reaching out to me on [**LinkedIn.**](https://www.linkedin.com/in/douglas-rocha-leite). There, I also share more insights, software development, and productivity content.
+
+### References
+
+1. Spring Cloud Function Documentation
+   https://docs.spring.io/spring-cloud-function/docs/current/reference/html/
+   The official documentation for Spring Cloud Function.
+
+2. AWS Lambda Documentation
+   https://docs.aws.amazon.com/lambda/latest/dg/
+   The official documentation for AWS Lambda.
+
+3. Serverless Spring: Deploy serverless functions to any platform using Spring Cloud Function
+   https://www.youtube.com/watch?v=gj1DDymw5iY&ab_channel=DanVega
+   This is a tutorial on Youtube that helped me get this thing up and running for the first time.

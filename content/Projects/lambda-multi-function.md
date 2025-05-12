@@ -30,6 +30,8 @@ cover:
     relative: false # when using page bundles set this to true
 ---
 
+Struggling to deploy multiple serverless functions efficiently? In this tutorial, you'll learn how to deploy multiple functions in a single AWS Lambda, simplifying management and reducing costs.
+
 Have you ever had trouble deploying multiple functions in an easy, cost-effective, and efficient way? In this tutorial, you'll learn how to deploy a single Spring Cloud Function project to AWS with the capability to host multiple functions and endpoints.
 
 This is **Part 2** of a series of smaller tutorials I’m publishing, all related to the same project. I’ll go into more detail about the project specifics when I write a dedicated article, but it will include **AWS Lambda, AWS DynamoDB, and a React front-end**, so stay tuned.
@@ -72,7 +74,7 @@ But if you mean **easier, simpler, and more suited to this specific case**, then
 
 ## Step 1 - Creating and Deploying a Spring Cloud Function Project with Multiple Functions
 
-### 1.1 - Recap of Part 1
+### 1.1 - Part 1 Recap
 
 I won’t go into detail about creating a Spring Cloud Function project here, since that’s covered in [**Part 1**](/projects/spring-aws-lambda). I’ll just show the code and modify the project name to `cloud-hello-bye`.
 
@@ -145,7 +147,7 @@ Go to the **Configuration** tab, select **Function URL**, then click **Create Fu
 
 ![Function URL](/images/lambda-multi-function/function-url.png)
 
-For this example, I will leave the URL openly accessible (not recommended for production, so I've removed it after releasing this article). 
+For this example, I will leave the URL openly accessible (not recommended for production, so I've removed it after releasing this article).
 
 ![Function Permissions](/images/lambda-multi-function/function-permissions.png)
 

@@ -14,7 +14,7 @@
     <lastBuildDate>Thu, 08 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://douglas-rocha-dev.vercel.app/tags/lambda/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>[Tutorial] Using Multiple Functions with Spring Cloud Function and AWS Lambda</title>
+      <title>How to Deploy Multiple Serverless Lambda Functions with One Spring Cloud Function Project on AWS</title>
       <link>https://douglas-rocha-dev.vercel.app/projects/lambda-multi-function/</link>
       <pubDate>Thu, 08 May 2025 00:00:00 +0000</pubDate>
       <guid>https://douglas-rocha-dev.vercel.app/projects/lambda-multi-function/</guid>

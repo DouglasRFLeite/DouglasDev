@@ -3,8 +3,7 @@ title: "How to Deploy Multiple Serverless Lambda Functions with One Spring Cloud
 date: 2025-05-08
 weight: 996
 tags: ["Java", "Spring", "Spring Boot", "Spring Cloud Function", "AWS", "Cloud", "Lambda"]
-author: "Me"
-# author: ["Me", "You"] # multiple authors
+author: "Douglas"
 showToc: true
 TocOpen: false
 draft: false

@@ -1,6 +1,6 @@
 ---
-title: "How to Connect, Write and Read Data to a DynamoDB Database with Spring Boot"
-date: 2025-05-12
+title: "Build a CRUD App with Spring Boot & AWS DynamoDB: Step-by-Step Practical Guide"
+date: 2025-05-19
 weight: 995
 tags: ["Java", "Spring", "Spring Boot", "Database", "NoSQL", "AWS", "Cloud", "DynamoDB", "AWS CLI"]
 author: "Douglas"
@@ -201,24 +201,247 @@ aws dynamodb scan \
 
 ### 2.1 - Create a Project with Spring Initializr
 
+I use the Spring Initializr via the Spring Boot Extension Pack on VSCode. You can always do it via the web, create your project, and unzip it to start coding. But what you're going to do is:
+
+1. Create a Maven project
+2. Spring Boot Version 3.4.5
+3. Java
+4. Name it as you wish
+5. I've used Java 17 and JAR packaging
+6. You'll add dependencies: Spring Web, Lombok (optional)
+
+And you're good to go. Or almost. Just go to your `pom.xml` file and add these dependencies:
+
+```xml
+<!-- AWS SDK for DynamoDB -->
+<dependency>
+    <groupId>software.amazon.awssdk</groupId>
+    <artifactId>dynamodb</artifactId>
+    <version>2.26.27</version>
+</dependency>
+<dependency>
+    <groupId>software.amazon.awssdk</groupId>
+    <artifactId>dynamodb-enhanced</artifactId>
+    <version>2.26.27</version>
+</dependency>
+```
+
+Now you're good to go. You can even run your code to check if everything works fine.
+
+You should be careful if trying to add **Spring Boot Dev Tools**, it can break with some Dynamo stuff.
+
 ### 2.2 - Create your DynamoDBConfig File
 
-### 2.3 - Create your FoodTable Model
+To access AWS and DynamoDB we'll need a DynamoDBEnhancedClient, and that's why we will create the `DynamoDBConfig.java` file. In this file, we will create two `Bean` methods. That way, when Spring starts, it will run those methods once and store the results so that every time I request an object of those classes, it will provide it to me.
 
-### 2.4 - Create your FoodTableRepository File
+```
+@Configuration
+public class DynamoDbConfig {
+  @Bean
+  public DynamoDbClient dynamoDbClient() {
+    return DynamoDbClient.builder()
+        .region(Region.SA_EAST_1)
+        .credentialsProvider(DefaultCredentialsProvider.create())
+        .build();
+  }
+
+  @Bean
+  public DynamoDbEnhancedClient dynamoDbEnhancedClient(DynamoDbClient dynamoDbClient) {
+    return DynamoDbEnhancedClient.builder()
+        .dynamoDbClient(dynamoDbClient)
+        .build();
+  }
+}
+```
+
+If you're using AWS CLI, you should be able to access your credentials via the `DefaultCredentialsProvider`. Set your region and you're good to go.
+
+The `DynamoDbClient` is an older way to access our DynamoDB Table, but we'll use the newer one.
+
+### 2.3 - Create your Food Model
+
+I like defining our model before anything else, so that's what we're doing first. As we've defined before, our Food item/row in our Dynamo FoodTable will have only id, food, and quantity values.
+
+```
+@Data
+@DynamoDbBean
+@AllArgsConstructor
+@NoArgsConstructor
+public class Food {
+  private Long id;
+  private String food;
+  private Integer quantity;
+
+  @DynamoDbPartitionKey
+  public Long getId() {
+    return id;
+  }
+}
+```
+
+If you've used Spring JPA before you can probably guess why we need both Constructors. If you haven't, I'll explain it a bit further ahead.
+
+Despite having Lombok create our getId, we still need to define it to annotate it with `@DynamoDbPartitionKey` because that's how we let DynamoDB know that's our PK.
+
+### 2.4 - Create your FoodRepository File
+
+DynamoDB is a database, so the part of our code that has to handle it is the Repository. Yeas, the Model as well, but that's how far we can go. The Service and Controller layers shouldn't ever know we're using DynamoDB. They should never even know the word DB. They know about each other and the repository.
+
+So this is where most of our Dynamo logic will be. What's not on the model at least. Let's create it for once.
+
+```
+@Repository
+public class FoodRepository {
+  private final DynamoDbTable<Food> foodTable;
+
+  public FoodRepository(DynamoDbEnhancedClient dbEnhancedClient) {
+    this.foodTable = dbEnhancedClient.table("FoodTable", TableSchema.fromBean(Food.class));
+  }
+}
+```
+
+Our @Repository here is mostly semantic, because we will have to do almost all of the work. Our `DynamoDbEnhancedClient` Bean will be injected via constructor and we'll use it to access the table on Dynamo via `DynamoDbTable`.
+
+Let us create our create and update methods next.
+
+```
+public Food save(Food food) {
+  this.foodTable.putItem(food);
+  return food;
+}
+
+public Food update(Food food) {
+  return this.foodTable.updateItem(food);
+}
+```
+
+These are pretty standard, but they show that we'll always have to go through the `foodTable`. Let's get a bit more complicated:
+
+```
+  public List<Food> findAll() {
+    return this.foodTable.scan().items().stream().toList();
+  }
+
+  public Food findById(Long id) {
+    return this.foodTable.getItem(requestBuilder -> requestBuilder.key(keyBuilder -> keyBuilder.partitionValue(id)));
+  }
+
+  public void delete(Long id) {
+    foodTable.deleteItem(requestBuilder -> requestBuilder.key(keyBuilder -> keyBuilder.partitionValue(id)));
+  }
+```
+
+The `findAll` method uses the `scan` method from the `DynamoDbTable`. That method, provides a lot of functionallity for pagination and iteration, that's why we need a couple of steps before returning a simple List.
+
+Both `findById` and `delete` methods use a nested lambda way of defining that our query is based on the PK. We could go into more detail on that, but we won't. It would take over a good part of this article.
 
 ### 2.5 - Create the Service and Controller Layers
 
+As I've just said, our Service and Controller layers don't know we use DynamoDB, so they'll be pretty standard. If you don't understand something, look for a Spring Web tutorial, not for a DynamoDB with Spring tutorial.
+
+```
+@Service
+@RequiredArgsConstructor
+public class FoodService {
+  private final FoodRepository repository;
+
+  public Food create(Food food) {
+    return repository.save(food);
+  }
+
+  public Food findById(Long id) {
+    return repository.findById(id);
+  }
+
+  public List<Food> findAll() {
+    return repository.findAll();
+  }
+
+  public Food update(Food food) {
+    return repository.update(food);
+  }
+
+  public void delete(Long id) {
+    repository.delete(id);
+  }
+}
+
+@RestController
+@RequiredArgsConstructor
+public class FoodController {
+  private final FoodService service;
+
+  @GetMapping("{id}")
+  public Food getByID(@PathVariable(value = "id") Long id) {
+    return service.findById(id);
+  }
+
+  @GetMapping
+  public List<Food> getAll() {
+    return service.findAll();
+  }
+
+  @PostMapping
+  public Food create(@RequestBody Food food) {
+    return service.create(food);
+  }
+
+  @PutMapping
+  public Food update(@RequestBody Food food) {
+    return service.update(food);
+  }
+
+  @DeleteMapping("{id}")
+  public void deleteByID(@PathVariable(value = "id") Long id) {
+    service.delete(id);
+  }
+}
+```
+
 ## Step 3 - Test your Application
+
+Our software should already be working perfectly, so let us run it and use Postman to test it out. You can use `curl` or other software as well.
 
 ### 3.1 - Fetch all existing data
 
+If you remember it well, when we created our database, we tested creating a sample data. That means we should be able to fetch all data and see that:
+
+![Fetch All](/images/spring-dynamo-db/fetch-all.png)
+
 ### 3.2 - Create a new data
+
+Now we should try creating data entries with a POST method. We will follow with another fetch all to confirm that our creation worked.
+
+![Create](/images/spring-dynamo-db/create.png)
+
+![Fetch All Create](/images/spring-dynamo-db/fetch-all-create.png)
 
 ### 3.3 - Update data
 
+Let's now tryn reduce the amount of Apples by one using our update method.
+
+![Put](/images/spring-dynamo-db/put.png)
+
+![Fetch All Put](/images/spring-dynamo-db/fetch-all-put.png)
+
 ### 3.4 - Fetch specific data
+
+Let's now try to access only the burger data with the fetch by id:
+
+![Fetch By Id](/images/spring-dynamo-db/fetch-by-id.png)
 
 ### 3.5 - Delete data
 
+Finally, let us delete the Burgers. We really should eat healthier!
+
+![Delete](/images/spring-dynamo-db/delete.png)
+
+![Fetch All Delete](/images/spring-dynamo-db/fetch-all-delete.png)
+
 ## Conclusion
+
+And that's how you create a simple CRUD using Spring and AWS DynamoDB. That's also how you connect to your AWS account and create a DynamoDB Table using AWS CLI.
+
+If you have questions or want to share your experience, feel free to reach out to me on [**LinkedIn**](https://www.linkedin.com/in/douglas-rocha-leite). There, I share more insights on software development and productivity.
+
+I'd like to remind you that this is a part of a series of articles for a bigger project I'm working on. We've already covered AWS Lambdas and Spring Cloud Function on [**Part 1**](/projects/spring-aws-lambda), as well as a multi function Lambda that works with Function URLs on [**Part 2**](/projects/lambda-multi-function). Our next and final step is to add a front-end to this backend cloud crazyness. So stay tuned for that!

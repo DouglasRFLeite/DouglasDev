@@ -6,7 +6,7 @@ tags: ["Java", "Spring", "Spring Boot", "Database", "NoSQL", "AWS", "Cloud", "Dy
 author: "Douglas"
 showToc: true
 TocOpen: false
-draft: true
+draft: false
 hidemeta: false
 comments: false
 description: "A tutorial on creating a CRUD application with AWS DynamoDB and AWS CLI"

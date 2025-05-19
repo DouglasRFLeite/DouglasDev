@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo -- 0.143.0</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 26 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 19 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://douglas-rocha-dev.vercel.app/tags/database/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Every Back-end Developer Must Master their ORM</title>
@@ -19,6 +19,13 @@
       <pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate>
       <guid>https://douglas-rocha-dev.vercel.app/blog/master-orm/</guid>
       <description>Why understanding your Data Mapper matters so much for Back-end Developers</description>
+    </item>
+    <item>
+      <title>Build a CRUD App with Spring Boot &amp; AWS DynamoDB: Step-by-Step Practical Guide</title>
+      <link>https://douglas-rocha-dev.vercel.app/projects/spring-dynamodb/</link>
+      <pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://douglas-rocha-dev.vercel.app/projects/spring-dynamodb/</guid>
+      <description>A tutorial on creating a CRUD application with AWS DynamoDB and AWS CLI</description>
     </item>
   </channel>
 </rss>
